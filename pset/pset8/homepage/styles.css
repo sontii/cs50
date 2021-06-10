@@ -1,0 +1,50 @@
+.content{
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.text{
+    text-align: left;
+}
+
+.jumbotron {
+    background-color: #000000;
+    color: #fff;
+    margin-bottom: 0rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 0px ;
+}
+
+iframe {
+    display: block;
+    border-style:none;
+    margin: 0 auto;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}

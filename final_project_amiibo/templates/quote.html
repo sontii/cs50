@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Find
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input list="name" autofocus class="form-control" name="symbol" placeholder="Name">
+                <datalist id="name">
+                {% for result in results %}
+                    <option value="{{ result }}">{{ result }}</option>
+                {% endfor %}
+            </datalist>
+        </div>
+        <button class="btn btn-primary" type="submit">Find</button>
+    </form>
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped" style="width:100%">
+    <tr>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Shares</th>
+        <th>Price</th>
+        <th>Total</th>
+    </tr>
+    {% for trade in trade %}
+    <tr>
+        <td>{{ trade.symbol }}</td>
+        <td>{{ trade.name }}</td>
+        <td>{{ trade['SUM(shares)'] }}</td>
+        <td>{{ trade.price | usd }}</td>
+        <td>{{ trade.total | usd }}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <td>CASH</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>{{ cash | usd  }}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>{{ gtotal | usd}}</td>
+    </tr>
+</table>
+{% endblock %}
